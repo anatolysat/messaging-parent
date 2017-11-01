@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<import resource="properties.xml" />
+	
+	<bean id="app" class="local.tests.spring.demo.App">
+		<constructor-arg ref="client" />
+		<constructor-arg ref="consoleLogger" />
+	</bean>
+
+	<!-- <bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateTimeInstance" />
+
+	<bean id="event" class="local.tests.spring.demo.beans.Event"
+		scope="prototype">
+		<constructor-arg>
+			<bean class="java.util.Date" />
+		</constructor-arg>
+		<constructor-arg ref="dateFormat" />
+	</bean> -->
+
+</beans>
